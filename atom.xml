@@ -6,7 +6,7 @@
   <link href="https://1999lijian.github.io/atom.xml" rel="self"/>
   
   <link href="https://1999lijian.github.io/"/>
-  <updated>2020-11-12T14:13:46.166Z</updated>
+  <updated>2020-11-12T14:00:05.651Z</updated>
   <id>https://1999lijian.github.io/</id>
   
   <author>
@@ -15,30 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Java进阶</title>
-    <link href="https://1999lijian.github.io/2020/11/12/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    <id>https://1999lijian.github.io/2020/11/12/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
-    <published>2020-11-12T14:24:39.000Z</published>
-    <updated>2020-11-12T14:13:46.166Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="java基础进阶"><a href="#java基础进阶" class="headerlink" title="java基础进阶"></a>java基础进阶</h1><h2 id="面向对象思想概念："><a href="#面向对象思想概念：" class="headerlink" title="面向对象思想概念："></a><strong>面向对象思想概念：</strong></h2><ul><li>Java是一种面向对象的高级编程语言</li><li><strong>面向对象：</strong>是用代码去高度模拟现实世界的事物，从而让软件为任务处理业务，为人类服务</li><li><strong>高级语言：</strong>代码看起来很像人类的自然语言</li></ul><h2 id="面向对象最重要的两个概念：类和对象"><a href="#面向对象最重要的两个概念：类和对象" class="headerlink" title="面向对象最重要的两个概念：类和对象"></a><strong>面向对象最重要的两个概念：类和对象</strong></h2><ul><li><strong>类：</strong>相同失误共同特征的描述<br>类只是学术上的一个概念并非真实存在的，只能描述一类事物</li><li><strong>对象：</strong>是真实存在的实例<br><strong>实例==对象</strong></li><li><strong>结论：</strong>有了类和对象就可以描述万千世界所有的事物<br><strong>必须先有 类才能有对象</strong></li><li><strong>定义类：</strong><br>格式：</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修饰符 class 类名&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>注意：</strong></p><ol><li>类名的首字母建议大写<br>满足驼峰模式(StudentNameCode)</li><li>一个Java代码文件中可以定义多个类<br>但是按照规定还是建议一个Java文件定义一个类</li><li>一个Java代码文件中只能有一个类是用public修饰的，而且public修饰的类名必须成为当前Java代码的文件名称</li></ol><ul><li>类中的成分：有且仅有五大成分</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">修饰符 class 类名&#123;</span><br><span class="line">  &#x2F;&#x2F;1.成员变量(Field):描述类或者对象的属性信息的</span><br><span class="line">  &#x2F;&#x2F;2.成员方法(Method):描述类或者对象的行为信息的</span><br><span class="line">  &#x2F;&#x2F;3.构造器(Constructor):初始化一个对象返回</span><br><span class="line">  &#x2F;&#x2F;4.代码块</span><br><span class="line">  &#x2F;&#x2F;5.内部类</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>类中有且仅有五种成分，否则代码报错！</strong></p><ul><li>构造器:<br>格式:</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修饰符 类名(形参列表)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li><strong>构造器的作用：</strong>初始化类的一个对象返回</li><li><strong>构造器的分类：</strong>无参数构造器，有参数构造器</li><li><strong>构造器的注意：</strong>一个类默认自带一个无参数构造器，但是如果泄露有参数构造器那么默认的无参数构造器就消失了，此时如果还需要用无参构造器就需要自己从新写一个</li><li><strong>构造器初始化对象的格式：</strong></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">类名 对象名称 &#x3D; new 构造器;</span><br><span class="line">Student s &#x3D; new Student();</span><br></pre></td></tr></table></figure><ul><li>**无参数构造器的作用:**初始化一个类的对象(使用对象默认值初始化)返回</li><li>**有参数构造器的作用:**初始化也给类的对象(可以在初始化对象的时候为对象赋值)返回</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;java基础进阶&quot;&gt;&lt;a href=&quot;#java基础进阶&quot; class=&quot;headerlink&quot; title=&quot;java基础进阶&quot;&gt;&lt;/a&gt;java基础进阶&lt;/h1&gt;&lt;h2 id=&quot;面向对象思想概念：&quot;&gt;&lt;a href=&quot;#面向对象思想概念：&quot; class=&quot;he</summary>
-      
-    
-    
-    
-    <category term="Java" scheme="https://1999lijian.github.io/categories/Java/"/>
-    
-    
-    <category term="Java进阶" scheme="https://1999lijian.github.io/tags/Java%E8%BF%9B%E9%98%B6/"/>
-    
-  </entry>
   
   <entry>
     <title>Java</title>
@@ -61,6 +37,30 @@
     
     
     <category term="Java" scheme="https://1999lijian.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java进阶</title>
+    <link href="https://1999lijian.github.io/2020/11/12/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>https://1999lijian.github.io/2020/11/12/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
+    <published>2020-11-12T13:06:34.237Z</published>
+    <updated>2020-11-12T14:54:06.828Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="java基础进阶"><a href="#java基础进阶" class="headerlink" title="java基础进阶"></a>java基础进阶</h1><h2 id="面向对象思想概念："><a href="#面向对象思想概念：" class="headerlink" title="面向对象思想概念："></a><strong>面向对象思想概念：</strong></h2><ul><li>Java是一种面向对象的高级编程语言</li><li><strong>面向对象：</strong>是用代码去高度模拟现实世界的事物，从而让软件为任务处理业务，为人类服务</li><li><strong>高级语言：</strong>代码看起来很像人类的自然语言</li></ul><h2 id="面向对象最重要的两个概念：类和对象"><a href="#面向对象最重要的两个概念：类和对象" class="headerlink" title="面向对象最重要的两个概念：类和对象"></a><strong>面向对象最重要的两个概念：类和对象</strong></h2><ul><li><strong>类：</strong>相同失误共同特征的描述<br>类只是学术上的一个概念并非真实存在的，只能描述一类事物</li><li><strong>对象：</strong>是真实存在的实例<br><strong>实例==对象</strong></li><li><strong>结论：</strong>有了类和对象就可以描述万千世界所有的事物<br><strong>必须先有 类才能有对象</strong></li><li><strong>定义类：</strong><br>格式：</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修饰符 class 类名&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>注意：</strong></p><ol><li>类名的首字母建议大写<br>满足驼峰模式(StudentNameCode)</li><li>一个Java代码文件中可以定义多个类<br>但是按照规定还是建议一个Java文件定义一个类</li><li>一个Java代码文件中只能有一个类是用public修饰的，而且public修饰的类名必须成为当前Java代码的文件名称</li></ol><ul><li>类中的成分：有且仅有五大成分</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">修饰符 class 类名&#123;</span><br><span class="line">  &#x2F;&#x2F;1.成员变量(Field):描述类或者对象的属性信息的</span><br><span class="line">  &#x2F;&#x2F;2.成员方法(Method):描述类或者对象的行为信息的</span><br><span class="line">  &#x2F;&#x2F;3.构造器(Constructor):初始化一个对象返回</span><br><span class="line">  &#x2F;&#x2F;4.代码块</span><br><span class="line">  &#x2F;&#x2F;5.内部类</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>类中有且仅有五种成分，否则代码报错！</strong></p><ul><li>构造器:<br>格式:</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修饰符 类名(形参列表)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li><strong>构造器的作用：</strong>初始化类的一个对象返回</li><li><strong>构造器的分类：</strong>无参数构造器，有参数构造器</li><li><strong>构造器的注意：</strong>一个类默认自带一个无参数构造器，但是如果泄露有参数构造器那么默认的无参数构造器就消失了，此时如果还需要用无参构造器就需要自己从新写一个</li><li><strong>构造器初始化对象的格式：</strong></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">类名 对象名称 &#x3D; new 构造器;</span><br><span class="line">Student s &#x3D; new Student();</span><br></pre></td></tr></table></figure><ul><li>**无参数构造器的作用:**初始化一个类的对象(使用对象默认值初始化)返回</li><li>**有参数构造器的作用:**初始化也给类的对象(可以在初始化对象的时候为对象赋值)返回</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;java基础进阶&quot;&gt;&lt;a href=&quot;#java基础进阶&quot; class=&quot;headerlink&quot; title=&quot;java基础进阶&quot;&gt;&lt;/a&gt;java基础进阶&lt;/h1&gt;&lt;h2 id=&quot;面向对象思想概念：&quot;&gt;&lt;a href=&quot;#面向对象思想概念：&quot; class=&quot;he</summary>
+      
+    
+    
+    
+    <category term="Java" scheme="https://1999lijian.github.io/categories/Java/"/>
+    
+    
+    <category term="Java进阶" scheme="https://1999lijian.github.io/tags/Java%E8%BF%9B%E9%98%B6/"/>
     
   </entry>
   
