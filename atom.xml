@@ -6,7 +6,7 @@
   <link href="https://1999lijian.github.io/atom.xml" rel="self"/>
   
   <link href="https://1999lijian.github.io/"/>
-  <updated>2020-11-12T14:00:05.651Z</updated>
+  <updated>2020-11-13T16:38:02.252Z</updated>
   <id>https://1999lijian.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java面向对象</title>
+    <link href="https://1999lijian.github.io/2020/11/13/Java%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/"/>
+    <id>https://1999lijian.github.io/2020/11/13/Java%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/</id>
+    <published>2020-11-13T14:15:09.981Z</published>
+    <updated>2020-11-13T16:38:02.252Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="面向对象学习的三条主线"><a href="#面向对象学习的三条主线" class="headerlink" title="面向对象学习的三条主线"></a>面向对象学习的三条主线</h2><ol><li><p>Java类及类的成员：</p><ul><li><p>属性</p></li><li><p>方法</p></li><li><p>构造器</p></li><li><p>代码块</p></li><li><p>内部类</p></li></ul></li><li><p>面向对象的三大特征：</p><ul><li>封装性</li><li>继承性</li><li>多态性</li></ul></li><li><p>其他关键字：</p><ul><li>this</li><li>super</li><li>sattic</li><li>final</li><li>abstract</li><li>interface</li><li>package</li><li>import等</li></ul></li></ol><h2 id="面向对象与面向过程"><a href="#面向对象与面向过程" class="headerlink" title="面向对象与面向过程"></a>面向对象与面向过程</h2><ol><li>面向过程：</li></ol><ul><li>强调的是功能行为，以函数为最小单位，考虑怎么做</li></ul><ol start="2"><li>面向对象：</li></ol><ul><li>强调具备功能 的对象，以类或者对象为最小单位，考虑谁来做</li></ul><h2 id="面向对象中两个重要概念"><a href="#面向对象中两个重要概念" class="headerlink" title="面向对象中两个重要概念"></a>面向对象中两个重要概念</h2><ol><li>类：</li></ol><ul><li>对一类事物的描述，是抽象的、概念上的定义</li></ul><ol start="2"><li>对象：</li></ol><ul><li>是实际存在的该类事物的每个个体，因而也称为实例<ul><li>面向对象程序设计的重点是类的设计</li><li>设计类，就是设计类的成员</li></ul></li></ul><ol start="3"><li>类和对象二者的关系：</li></ol><ul><li>对象是有类new出来的（派生出来的）</li></ul><h2 id="面向对象思想落地实现的规则1"><a href="#面向对象思想落地实现的规则1" class="headerlink" title="面向对象思想落地实现的规则1"></a>面向对象思想落地实现的规则1</h2><ol><li><p>创建类，设计类的成员</p></li><li><p>创建类的对象</p></li><li><p>通过“对象.属性“或者”对象.方法“调用对象的结构</p></li></ol><p>**属性=成员变量 **</p><p><strong>方法=成员方法=函数</strong></p><p><strong>创建类的对象=类的实例化=实例化类</strong></p><h2 id="对象的创建与对象的内存解析"><a href="#对象的创建与对象的内存解析" class="headerlink" title="对象的创建与对象的内存解析"></a>对象的创建与对象的内存解析</h2><p><strong>实例：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Person p1 &#x3D; new Person();</span><br><span class="line"></span><br><span class="line">Person p1 &#x3D; new Person();</span><br><span class="line"></span><br><span class="line">Person p3 &#x3D; p1; &#x2F;&#x2F;没有新创建一个对象，共用一个堆空间中的对象实体</span><br></pre></td></tr></table></figure><p><strong>说明：</strong></p><ul><li>如果创建了一个类的多个对象，则每个对象都是独立的用于一套类的属性。（非static的）</li><li>意味着：如果我们修改一个对象的属性a，则不影响另外一个对象属性a的值</li></ul><p><strong>内存解析：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;下面图片的代码</span><br><span class="line"></span><br><span class="line">Person p1 &#x3D; new Person（）；</span><br><span class="line">p1.name &#x3D; &quot;Tom&quot;;</span><br><span class="line">p1.isMale&#x3D;true;</span><br><span class="line">Person p1 &#x3D; new Person（）；</span><br><span class="line">system.out.println(p2.name); &#x2F;&#x2F;null </span><br><span class="line">Person p3 &#x3D; p1;</span><br><span class="line">p3.age&#x3D;10;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p><img src="/2020/11/13/Java%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AD%98%E8%A7%A3%E6%9E%90.png" alt="对象内存解析"></p><p><strong>对象数组的内存解析：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">class Student&#123;</span><br><span class="line">int number;</span><br><span class="line">int state &#x3D; 1;</span><br><span class="line">int score;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Student[] stus &#x3D; new Studnet[5];</span><br><span class="line">stus[0] &#x3D; new Student();</span><br><span class="line">system.out.println(stus[0].state);&#x2F;&#x2F;1</span><br><span class="line">system.out.println(stus[1].state);&#x2F;&#x2F;null</span><br><span class="line">system.out.println(stus[1].number);&#x2F;&#x2F;异常</span><br><span class="line">stus[1] &#x3D; new Student();</span><br><span class="line">system.out.println(stus[0].number);&#x2F;&#x2F;0</span><br></pre></td></tr></table></figure><p> <img src="/2020/11/13/Java%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E7%9A%84%E5%86%85%E5%AD%98%E8%A7%A3%E6%9E%90.png" alt="对象数组的内存解析"> </p><h2 id="匿名对象"><a href="#匿名对象" class="headerlink" title="匿名对象"></a>匿名对象</h2><ol><li>匿名对象：</li></ol><ul><li>我们创建的对象，没显示的赋给一个变量明<ul><li>即为匿名对象</li></ul></li></ul><ol start="2"><li>特点：</li></ol><ul><li>匿名对象只能调用一次</li></ul><ol start="3"><li>举例：</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">new Phone().sendEmail();</span><br><span class="line">new Phone().PlayGame();</span><br><span class="line"></span><br><span class="line">new Phone().price &#x3D; 1999;</span><br><span class="line">new Phone().showPrice();&#x2F;&#x2F;0.0</span><br></pre></td></tr></table></figure><p>应用场景：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">PhoneMall mall &#x3D; new PhoneMal();</span><br><span class="line">&#x2F;&#x2F;匿名对象的使用</span><br><span class="line">mall.show(new Phone());</span><br><span class="line"></span><br><span class="line">class PhoneMall&#123;</span><br><span class="line">public void show(Phone phone)&#123;</span><br><span class="line">phone.sendEmail();</span><br><span class="line">phone.playGame();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="理解”万事万物皆为对象“"><a href="#理解”万事万物皆为对象“" class="headerlink" title="理解”万事万物皆为对象“"></a>理解”万事万物皆为对象“</h2><ol><li>再Java语言的范畴中，我们都将功能、结构等封装到类中，通过类的实例话，来调用具体的功能结构</li></ol><ul><li>Scanner，String等</li><li>文件：File</li><li>网络资源：url</li></ul><ol start="2"><li>涉及到Java语言于前端HTML、后端的数据库交互，前后端的结构再Java层面交互时，都体现为类、对象</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;面向对象学习的三条主线&quot;&gt;&lt;a href=&quot;#面向对象学习的三条主线&quot; class=&quot;headerlink&quot; title=&quot;面向对象学习的三条主线&quot;&gt;&lt;/a&gt;面向对象学习的三条主线&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Java类及类的成员：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;</summary>
+      
+    
+    
+    
+    <category term="Java" scheme="https://1999lijian.github.io/categories/Java/"/>
+    
+    
+    <category term="Java面向对象" scheme="https://1999lijian.github.io/tags/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>Java</title>
